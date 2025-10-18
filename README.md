@@ -1,2 +1,2 @@
-# kattailmeow-SillyTavern-MemoryKit
+# SillyTavern-MemoryKit
 Say our goal: SAVE THE TOKEN!!! Thank you 😉
