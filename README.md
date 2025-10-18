@@ -26,3 +26,6 @@ Please feel free to fork, create your feature branch, make PRs, etc.
 You can reach me on **discord** with this username: **@ruri9820** ( Might be late reply though. Still, please directly say what you are contacting about 🥹
 
 有问题可以**Discord**里找 **@ruri9820** 联系我哈 (求注明来意以及可能会轮回先致歉了嘤 🥹
+
+## License
+[Apache 2.0](https://github.com/kattailmeow/SillyTavern-MemoryKit/blob/main/LICENSE)
