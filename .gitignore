@@ -1,0 +1,80 @@
+# --- 基础 ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+node_modules/
+pnpm-lock.yaml
+
+# --- 构建产物 ---
+dist/
+.tsbuild/
+build/
+.cache/
+coverage/
+*.tsbuildinfo
+
+# --- 临时/打包文件 ---
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# --- 输出文件夹（多包） ---
+apps/*/dist/
+apps/*/.tsbuild/
+apps/*/node_modules/
+packages/*/dist/
+packages/*/.tsbuild/
+packages/*/node_modules/
+
+# --- 发布用目录 ---
+release/.out/
+release/bin/
+release/build.config.mjs.backup
+sillytavern-memorykit-release/
+
+# --- 环境变量/配置 ---
+.env
+.env.*
+!.env.example
+
+# --- 平台杂项 ---
+*.exe
+*.dll
+*.so
+*.dylib
+
+# --- macOS/Linux 系统垃圾 ---
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# --- 编辑器碎片 ---
+*.orig
+*.rej
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# --- SQLite 数据库 ---
+*.db
+*.db-shm
+*.db-wal
+
+# --- 输出日志/分析 ---
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# --- 备选: 打包出来的 zip ---
+*.zip
+*.tar
+*.tgz
