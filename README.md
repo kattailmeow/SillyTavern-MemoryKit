@@ -4,9 +4,11 @@ Hi hi! Welcome welcome 🥰
 
 Here is Kat's **dev repo** for the ST-MemoryKit-Plugin extension, but:
 
-> ⚠️ Wrong place to download! Please go [HERE](https://github.com/kattailmeow/ST-MemoryKit-Plugin) to download the release version with just one simple copy & paste and forget about the code xD
+> ⚠️ **It is not yet downloadable since Kat is still working on it TAT**
 
-> ⚠️ 注意这里不是下载地址哦亲亲，要下载的话请[这边](https://github.com/kattailmeow/ST-MemoryKit-Plugin)走捏 (当然你拒绝直接复制粘贴式下载非要配置这玩意我也不会拦着你啦...
+<!-- > ⚠️ Wrong place to download! Please go [HERE](https://github.com/kattailmeow/ST-MemoryKit-Plugin) to download the release version with just one simple copy & paste and forget about the code xD
+
+> ⚠️ 注意这里不是下载地址哦亲亲，要下载的话请[这边](https://github.com/kattailmeow/ST-MemoryKit-Plugin)走捏 (当然你拒绝直接复制粘贴式下载非要配置这玩意我也不会拦着你啦... -->
 
 ## To Contribute / 来写码的
 
