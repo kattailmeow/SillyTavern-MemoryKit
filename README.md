@@ -2,7 +2,7 @@
 
 Hi hi! Welcome welcome 🥰
 
-Here is Kat's **dev repo** for the SillyTavern-MemoryKit extension, but:
+Here is Kat's **dev repo** for the ST-MemoryKit-Plugin extension, but:
 
 > ⚠️ Wrong place to download! Please go [HERE](https://github.com/kattailmeow/ST-MemoryKit-Plugin) to download the release version with just one simple copy & paste and forget about the code xD
 
