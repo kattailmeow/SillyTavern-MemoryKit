@@ -6,17 +6,24 @@
     "packageManager": "pnpm@9.12.3",
     "workspaces": [],
     "scripts": {
+        "dev": "BUILD_PROFILE=DEV node build.js",
+        "build": "BUILD_PROFILE=RELEASE node build.js",
+        "build:dev": "BUILD_PROFILE=DEV node build.js",
+        "build:release": "BUILD_PROFILE=RELEASE node build.js",
+        "test": "echo 'Tests integrated with SillyTavern'"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/kattailmeow/SillyTavern-MemoryKit.git"
+        "url": "git+https://github.com/kattailmeow/SillyTavern-MemoryKit-Dev.git"
     },
     "author": "kattailmeow",
     "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/kattailmeow/SillyTavern-MemoryKit/issues"
     },
-    "homepage": "https://github.com/kattailmeow/SillyTavern-MemoryKit",
+    "homepage": "https://github.com/kattailmeow/SillyTavern-MemoryKit-Dev",
     "devDependencies": {
+        "jsdom": "^23.0.0",
+        "uuid": "^9.0.0"
     }
 }

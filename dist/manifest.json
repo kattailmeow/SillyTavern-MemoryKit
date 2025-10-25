@@ -1,0 +1,20 @@
+{
+  "name": "sillytavern-memorykit",
+  "display_name": "Memory Kit by Kat",
+  "description": "A memory management plugin for SillyTavern",
+  "loading_order": 1,
+  "requires": [],
+  "optional": [],
+  "dependencies": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "kattailmeow",
+  "version": "1.0.0",
+  "homePage": "https://github.com/kattailmeow/SillyTavern-MemoryKit",
+  "auto_update": false,
+  "minimum_client_version": "1.0.0",
+  "i18n": {
+    "zh-cn": "i18n/zh-cn.json"
+  },
+  "buildTime": "2025-10-25T09:03:41.210Z"
+}

@@ -1,83 +1,101 @@
-# --- 基础 ---
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-*.log
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-node_modules/
-pnpm-lock.yaml
+# Development files (keep in dev repo)
+# changelog_template.md  # Keep for reference
+# architecture.md        # Keep for reference  
+# task.md               # Keep for reference
 
-# --- 构建产物 ---
-dist/
-.tsbuild/
+# Build output (keep dist/ in dev repo for release preparation)
+# dist/  # Commented out - we need dist/ for release repo preparation
 build/
-.cache/
-coverage/
-*.tsbuildinfo
 
-# --- 临时/打包文件 ---
-*.tmp
-*.temp
-*.bak
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# IDE files
+.vscode/
+.idea/
 *.swp
 *.swo
 
-# --- 输出文件夹（多包） ---
-apps/*/dist/
-apps/*/.tsbuild/
-apps/*/node_modules/
-packages/*/dist/
-packages/*/.tsbuild/
-packages/*/node_modules/
-
-# --- 发布用目录 ---
-release/.out/
-release/bin/
-release/build.config.mjs.backup
-sillytavern-memorykit-release/
-
-# --- 环境变量/配置 ---
-.env
-.env.*
-!.env.template
-
-# --- 平台杂项 ---
-*.exe
-*.dll
-*.so
-*.dylib
-
-# --- macOS/Linux 系统垃圾 ---
+# OS files
 .DS_Store
-.AppleDouble
-.LSOverride
-__MACOSX/
+Thumbs.db
 
-# --- 编辑器碎片 ---
-*.orig
-*.rej
-*.sublime-project
-*.sublime-workspace
-*.iml
-
-# --- SQLite 数据库 ---
-*.db
-*.db-shm
-*.db-wal
-
-# --- 输出日志/分析 ---
-logs/
+# Logs
 *.log
-npm-debug.log*
-pnpm-debug.log*
+logs/
 
-# --- 备选: 打包出来的 zip ---
-*.zip
-*.tar
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Test files
+test-phase-*.js
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
 *.tgz
 
-# --- 自用 ---
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional stylelint cache
+.stylelintcache
+
+# SvelteKit build / generate output
+.svelte-kit
+
+# Dev files for own use
 changelog_template.md
+architecture.md
+task.md
+prompts/
+
+# End of https://www.gitignore.io/api/node
