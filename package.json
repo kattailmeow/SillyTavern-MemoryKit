@@ -14,14 +14,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/kattailmeow/SillyTavern-MemoryKit-Dev.git"
+        "url": "git+https://github.com/kattailmeow/SillyTavern-MemoryKit.git"
     },
     "author": "kattailmeow",
     "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/kattailmeow/SillyTavern-MemoryKit/issues"
     },
-    "homepage": "https://github.com/kattailmeow/SillyTavern-MemoryKit-Dev",
+    "homepage": "https://github.com/kattailmeow/SillyTavern-MemoryKit",
     "devDependencies": {
         "jsdom": "^23.0.0",
         "uuid": "^9.0.0"

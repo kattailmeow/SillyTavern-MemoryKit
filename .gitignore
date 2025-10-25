@@ -4,7 +4,7 @@
 # task.md               # Keep for reference
 
 # Build output (keep dist/ in dev repo for release preparation)
-# dist/  # Commented out - we need dist/ for release repo preparation
+dist/
 build/
 
 # Dependencies
@@ -97,5 +97,6 @@ changelog_template.md
 architecture.md
 task.md
 prompts/
+SillyTavern-MemoryKit.wiki/
 
 # End of https://www.gitignore.io/api/node

@@ -1,130 +1,135 @@
-# SillyTavern-MemoryKit-Dev - 记忆工具喜加一
+# SillyTavern-MemoryKit / 记忆工具喜加一
 
-Hi hi! Welcome welcome 🥰
+A token-efficient memory extraction and retrieval plugin for SillyTavern that injects minimal, precise information into your prompts.
 
-Here is Kat's **dev repo** for the ST-MemoryKit-Plugin extension, but:
+一个为 SillyTavern 设计的 token 高效记忆提取和检索插件，将最小、精确的信息注入到你的提示中。
+
+## What is MemoryKit? / 什么是 MemoryKit？
+
+### English
+MemoryKit helps you manage character memories efficiently by:
+- **Extracting key information** from your chat conversations
+- **Storing memories** in a structured, searchable format
+- **Injecting only relevant memories** into prompts (saving tokens!)
+- **Tracking story timelines** alongside real-world time
+
+### 中文
+MemoryKit 通过以下方式帮助你高效管理角色记忆：
+- **从聊天对话中提取关键信息**
+- **以结构化、可搜索的格式存储记忆**
+- **只将相关记忆注入提示中**（节省 token！）
+- **同时追踪故事时间线和现实时间**
+
+## Quick Installation / 快速安装
 
 > ⚠️ **It is not yet downloadable since Kat is still working on it TAT**
 
-<!-- For stable releases and easy installation, see the [Release Repository](https://github.com/kattailmeow/SillyTavern-MemoryKit).
+### Option 1: SillyTavern Built-in Installer (Easiest) / SillyTavern 内置安装器（最简单）
 
-注意这里不是下载地址哦亲亲，要下载的话请[这边](https://github.com/kattailmeow/SillyTavern-MemoryKit)走捏 (当然你拒绝直接复制粘贴式下载非要配置这玩意我也不会拦着你啦... -->
+1. Open SillyTavern
+2. Go to **Extensions** → **Install Extension**
+3. Paste this URL: `https://github.com/kattailmeow/SillyTavern-MemoryKit`
+4. Click **Install**
+5. Done! The extension is automatically installed
 
-## To Contribute / 来写码的
+### Option 2: Direct Download / 直接下载
+1. Download the latest release from [GitHub Releases](https://github.com/kattailmeow/SillyTavern-MemoryKit/releases)
+2. Extract the `dist` folder
+3. Copy it to your SillyTavern extensions directory
 
-### English Ver.
-Not downloading but wanting to contribute some lovely code? You are at the right place!
+### Option 3: Docker (If you know what this is doing) / Docker（如果你知道这是在干嘛的话）
 
-Please feel free to fork, create your feature branch, make PRs, etc.
-
-### 中文版?
-啊不是下载是嫌Kat的码不行想要自己手搓啦？那好像倒确实也没走错哈...
-
-欢迎fork，欢迎...呃...dbq好像上文那坨英语用中文说一遍关键词也都还是英文啊...呃呃呃反正都是码农了肯定看得懂不需要翻译的啦诶嘿QwQ
-
-## Development Status
-
-**Current Phase**: 1.3 (Message Range Fetcher)  
-**Next**: Regex Preprocessor, Story-time Parser, Staged Batch Objects
-
-### 🧪 Experimental Features
-- Feature flags system with DEV/RELEASE profiles
-- Dual timestamp support (real + story time)
-- Unlimited length attribute support
-- Token-based message batching with carryover
-
-### 🐛 Known Issues
-- IndexedDB mocking in tests needs improvement
-- Some edge cases in timestamp parsing
-- Build script could be more robust
-
-### 📝 Development Notes
-- All core modules are in `src/` directory
-- Tests are temporary and cleaned up after each phase
-- Feature flags control experimental functionality
-- Configuration is user-customizable via settings
-
-## Development Setup
-
-### Prerequisites
-
-- SillyTavern running locally or in Docker
-- Node.js 18+ and pnpm
-- Git (for development)
-
-### Quick Start
-
-1. **Clone the dev repository**:
-   ```bash
-   git clone https://github.com/kattailmeow/SillyTavern-MemoryKit-Dev.git
-   cd SillyTavern-MemoryKit-Dev
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   pnpm install
-   ```
-
-3. **Build and test**:
-   ```bash
-   # Development build (with debug features)
-   pnpm build:dev
-   
-   # Test specific phase
-   node test-phase-1.1.1-1.1.2.js  # (if exists)
-   ```
-
-4. **Development workflow**:
-   ```bash
-   # Make changes to src/ files
-   # Build to test
-   pnpm build:dev
-   # Copy dist/ to SillyTavern or mount in Docker
-   ```
-
-### Docker Development
-
-Mount the entire project for live development:
+Add this to your SillyTavern docker-compose.yml:
 
 ```yaml
 volumes:
-  - "/path/to/SillyTavern-MemoryKit-Dev:/home/node/app/public/scripts/extensions/third-party/memory-dev:ro"
+  - "/path/to/SillyTavern-MemoryKit/dist:/home/node/app/public/scripts/extensions/third-party/memory-dev:ro"
 ```
 
-## Project Structure
+**Note**: Docker version still requires manual download and configuration of model files. The container only runs the application, not the models.
 
-```
-src/
-├── core/           # Core functionality
-│   ├── config-manager.js      # User settings
-│   ├── feature-flags.js       # Build profiles
-│   ├── message-range-fetcher.js # Token batching
-│   └── timestamp-manager.js   # Dual timestamps
-├── store/          # Storage layer
-│   └── memory-store.js        # IndexedDB operations
-├── schemas/        # Data models
-│   └── default-schema.js      # Object type definitions
-├── integrations/   # SillyTavern bridge
-│   ├── st-bridge.js           # API wrapper
-│   └── sillytavern-integration.js # Extension entry
-├── ui/            # User interface (planned)
-├── workers/       # Web Workers (planned)
-└── prompts/       # LLM templates (planned)
-```
+**注意**: Docker 版本仍需要手动下载和配置模型文件。容器只运行应用程序，不包含模型。
 
-## Build Profiles
-
-- **DEV**: Includes debug features, embeddings, performance monitoring
-- **RELEASE**: Minimal build with only core functionality
-
-### Scripts
-
+### Option 4: Git Clone (For Updates with Specific Version) / Git 克隆（用于自主控制更新的版本）
 ```bash
-pnpm dev              # Development build
-pnpm build            # Production build
-pnpm build:dev        # Development build (explicit)
-pnpm build:release    # Production build (explicit)
+git clone https://github.com/kattailmeow/SillyTavern-MemoryKit.git
+cd SillyTavern-MemoryKit
+# Copy dist/ folder to your SillyTavern extensions
 ```
+
+## How to Use / 如何使用
+
+### English
+1. **Install** the extension in SillyTavern
+2. **Start chatting** - MemoryKit automatically analyzes your conversations
+3. **Configure settings** (optional) - Adjust character limits and time modes
+4. **Enjoy efficient prompts** - Only relevant memories are injected
+
+### 中文
+1. **在 SillyTavern 中安装**扩展
+2. **开始聊天** - MemoryKit 自动分析你的对话
+3. **配置设置**（可选）- 调整字符限制和时间模式
+4. **享受高效提示** - 只注入相关记忆
+
+## Configuration / 配置
+
+### Basic Settings / 基本设置
+
+In SillyTavern's extension settings, you can configure:
+
+在 SillyTavern 的扩展设置中，你可以配置：
+
+- **Character Limits**: Set maximum lengths for names, descriptions, etc. / **字符限制**：设置名称、描述等的最大长度
+- **Time Mode**: Choose between story time, real time, or hybrid / **时间模式**：在故事时间、现实时间或混合模式之间选择
+- **Analysis Profile**: Select how memories are extracted / **分析配置文件**：选择记忆提取方式
+
+## Features / 功能
+
+### ✅ Current Features / 当前功能
+- **Smart Memory Extraction**: Automatically identifies important information / **智能记忆提取**：自动识别重要信息
+- **Token Efficiency**: Only injects relevant memories to save tokens / **Token 效率**：只注入相关记忆以节省 token
+- **Dual Timestamps**: Tracks both story time and real time / **双重时间戳**：同时追踪故事时间和现实时间
+- **Character Limits**: Prevents overly long descriptions / **字符限制**：防止描述过长
+- **Flexible Configuration**: Customize behavior to your needs / **灵活配置**：根据需要自定义行为
+
+### 🔄 Coming Soon / 即将推出
+- **UI Dashboard**: Visual memory management / **UI 仪表板**：可视化记忆管理
+- **Import/Export**: Backup and share memories / **导入/导出**：备份和分享记忆
+- **Advanced Filtering**: More precise memory selection / **高级过滤**：更精确的记忆选择
+- **Bulk Operations**: Process multiple chats at once / **批量操作**：一次处理多个聊天
+
+## Troubleshooting / 故障排除
+
+### Common Issues / 常见问题
+
+**Q: Extension not loading? / 扩展无法加载？**
+A: Make sure you copied the entire `dist` folder, not just individual files. / 确保你复制了整个 `dist` 文件夹，而不是单个文件。
+
+**Q: Memories not being extracted? / 记忆没有被提取？**
+A: Check that you have messages in your chat and the extension is enabled. / 检查你的聊天中是否有消息以及扩展是否已启用。
+
+**Q: Too many tokens being used? / 使用了太多 token？**
+A: Adjust the character limits in settings to make memories more concise. / 在设置中调整字符限制以使记忆更简洁。
+
+### Getting Help / 获取帮助
+
+- **Issues**: Report bugs on [GitHub Issues](https://github.com/kattailmeow/SillyTavern-MemoryKit/issues)
+- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/kattailmeow/SillyTavern-MemoryKit/discussions)
+- **SillyTavern Community**: Ask in the SillyTavern Discord
+
+## For Developers / 开发者
+
+Looking to contribute or understand the technical details? Check out our [GitHub Wiki](https://github.com/kattailmeow/SillyTavern-MemoryKit/wiki) for:
+- Development setup and build instructions
+- Architecture documentation
+- Contributing guidelines
+- Technical specifications
+
+想要贡献代码或了解技术细节？查看我们的 [GitHub Wiki](https://github.com/kattailmeow/SillyTavern-MemoryKit/wiki)：
+- 开发设置和构建说明
+- 架构文档
+- 贡献指南
+- 技术规范
 
 ## Questions / 要问问题
 
@@ -132,6 +137,20 @@ You can reach me on **discord** with this username: **@ruri9820** ( Might be lat
 
 有问题可以**Discord**里找 **@ruri9820** 联系我哈 (求注明来意以及可能会轮回先致歉了嘤 🥹
 
-## License
+## License / 许可证
 
-[Apache 2.0](https://github.com/kattailmeow/SillyTavern-MemoryKit-Dev/blob/main/LICENSE)
+[Apache 2.0](https://github.com/kattailmeow/SillyTavern-MemoryKit/blob/main/LICENSE)
+
+## Acknowledgments / 致谢
+
+Built for the SillyTavern community by [kattailmeow](https://github.com/kattailmeow).  
+Thanks to all contributors and testers!
+
+由 [kattailmeow](https://github.com/kattailmeow) 为 SillyTavern 社区构建。  
+感谢所有贡献者和测试者！
+
+---
+
+**Need the latest version?** Check the [Releases](https://github.com/kattailmeow/SillyTavern-MemoryKit/releases) page for updates.
+
+**需要最新版本？** 查看 [Releases](https://github.com/kattailmeow/SillyTavern-MemoryKit/releases) 页面获取更新。
