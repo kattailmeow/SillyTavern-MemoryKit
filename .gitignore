@@ -42,7 +42,7 @@ sillytavern-memorykit-release/
 # --- 环境变量/配置 ---
 .env
 .env.*
-!.env.example
+!.env.template
 
 # --- 平台杂项 ---
 *.exe
@@ -78,3 +78,6 @@ pnpm-debug.log*
 *.zip
 *.tar
 *.tgz
+
+# --- 自用 ---
+changelog_template.md

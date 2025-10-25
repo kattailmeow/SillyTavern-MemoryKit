@@ -1,1 +1,0 @@
-// @TODO: /ingest /query /preview 的请求/响应类型
